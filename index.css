@@ -6,3 +6,12 @@
     padding: 0;
     text-decoration: none;
 }
+.container_capa{
+    display: flex;
+    width: 98vw;
+    height: 98vh;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    margin: 10px auto;
+    background-color: aquamarine;
+}

@@ -8,10 +8,39 @@
 }
 .container_capa{
     display: flex;
-    width: 98vw;
-    height: 98vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
     border: 1px solid lightgrey;
-    border-radius: 10px;
-    margin: 10px auto;
-    background-color: aquamarine;
+    background-color: rgb(15, 160, 185);
+}
+.container_capa h1{
+    font-size: 5rem;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+.container_capa h2{
+    font-size: 2rem;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+nav{
+    position: absolute;
+    top: 5vh;
+    left: 50vw;
+}
+nav a{
+    margin-right: 4vw;
+    color: white;
+    padding: 10px;
+}
+nav a:hover{
+    cursor: pointer;
+    background-color: white;
+    color:rgb(15, 160, 185);
+}
+.figura_fundo{
+    border-radius: 20px;
 }

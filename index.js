@@ -34,3 +34,15 @@ function calcularIMC(){
         }
     document.getElementById("imc").value = imc.toFixed(2);   
 }
+
+function limpar(){
+    if(peso!=0 && altura!=0 && imc!=0 && resultado!=0){
+        document.getElementById("peso").value = " ";
+        document.getElementById("altura").value = " ";
+        document.getElementById("imc").value = " ";
+        document.getElementById("resultado").value = " ";
+        var texto = document.getElementById("resultado");
+        texto.innerText = " ";
+    }
+    
+}

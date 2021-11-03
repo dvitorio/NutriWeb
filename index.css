@@ -34,6 +34,20 @@ nav{
     top: 5vh;
     left: 50vw;
 }
+#contato{
+    width: 12vw;
+    height: 6vh;
+    border-radius: 5px;
+    background-color: orange;
+}
+#contato:hover{
+    background-color: orangered;
+    color: white;
+    box-shadow: 5px 5px 5px black;
+}
+#contato:active{
+    transform: scale(0.9);
+}
 nav a{
     margin-right: 4vw;
     color: white;
@@ -44,33 +58,40 @@ nav a:hover{
     background-color: white;
     color:rgb(15, 160, 185);
 }
-.container_imc{
+.container_calculos{
     width: 40vw;
     height: 90vh;
-    background-color: rgb(31, 97, 219);
-    border: 1px solid grey;
+    background-color: rgb(240, 231, 231);
+    border: 1px solid lightgrey;
     border-radius: 10px;
+    box-shadow: 5px 5px 10px grey;
     margin: 5vh auto;
 }
-.container_imc h3{
-    color: white;
+.container_calculos h3{
+    color: slategray;
     display: block;
     font-size: 1.5rem;
     text-align: center;
     letter-spacing: 2px;
     margin-top: 2vh; 
 }
+.container_calculos i{
+    color: slategrey;
+    font-size: 2rem;
+    margin-right: 40px;
+    float: right;
+}
 .caixa_imc{
     display: flex;
     flex-direction: column;
     width: 30vw;
     height: 70vh;
-    border: 1px solid white;
-    margin: 1vh auto;
+    border: 1px solid rgb(194, 187, 187);
+    margin: 2vh auto;
     padding: 10px;
 }
 .caixa_imc h4{
-    color: white;
+    color: slategray;
     margin: 10px auto;
 }
 #imc{
@@ -80,6 +101,7 @@ nav a:hover{
     text-align: center;
 }
 .caixa_imc input{
+    color: grey;
     font-size: 1.5rem;
     width: 20vw;
     height: 6vh;
@@ -108,9 +130,21 @@ button{
 }
 button:hover{
     cursor: pointer;
-    transform: scale(0.9);
     background-color: darkgoldenrod;
 }
 button:active{
-    transform: scale(1.1);
+    transform: scale(0.9);
+}
+.sexo_info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+}
+.sexo_info input{
+    margin-left: 5px;
+    width: 20px;
+}
+.sexo_info label{
+    text-align: center;
 }

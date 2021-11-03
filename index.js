@@ -5,12 +5,12 @@ function calcularIMC(){
         if(imc > 0 && imc < 18.5){
             let texto = document.getElementById("resultado");
             texto.innerText = "Você está abaixo do peso!";
-            texto.style.color = 'white';
+            texto.style.color = 'green';
         }
         else if(imc >= 18.5 && imc <= 24.9){
             let texto = document.getElementById("resultado");
             texto.innerText = "Você está com peso normal. Parabéns!";
-            texto.style.color = 'white';
+            texto.style.color = 'green';
         }
         else if(imc >= 25 && imc <= 29.9){
             let texto = document.getElementById("resultado");

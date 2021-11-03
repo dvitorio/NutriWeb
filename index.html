@@ -7,14 +7,15 @@
     <title>NutriWeb Serviços para Nutricionistas</title>
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="container_capa">
+    <div class="container_capa" id="container_capa">
         <nav>
             <a href="https://github.com/dvitorio" target="blanck">Sobre</a>
             <a href="#container_imc">Cálculo de IMC</a>
             <a href="#">Cintura/Quadril</a>
-            <a href="#">Contato</a>
+            <a href="" id="contato">Contato</a>
         </nav>
         <div class="figura_fundo">
             <img src="nutricao.png" alt="Figura de fundo">
@@ -23,7 +24,7 @@
         <h2>O seu guia de nutrição na Internet</h2>
     </div>
 
-    <div class="container_imc" id="container_imc">
+    <div class="container_calculos" id="container_imc">
         <h3>Índice de Massa Corporal (IMC)</h3>
         <div class="caixa_imc">
             <h4>Peso</h4>
@@ -35,6 +36,28 @@
             <div id="resultado"></div>
             <button id="btn_limpar" onclick="limpar()">Realizar nova consulta</button>
         </div>
+        <a href="#container_capa"><i class="fas fa-sort-up"></i></a>
+    </div>
+
+    <div class="container_calculos" id="container_cintura">
+        <h3>Relação Cibtura/Quadril</h3>
+        <div class="caixa_imc">
+            <div class="sexo_info">
+                <label for="">Masculino</label>
+                <input type="radio" name="sexo" id="masculino">
+                <label for="">Feminino</label>
+                <input type="radio" name="sexo" id="feminino">
+            </div>
+            <h4>Peso</h4>
+            <input type="text" id="peso">
+            <h4>Altura</h4>
+            <input type="text" id="altura" onchange="calcularIMC()">
+            <h4>IMC</h4>
+            <input type="text" id="imc" onchange="calcularIMC()">
+            <div id="resultado"></div>
+            <button id="btn_limpar" onclick="limpar()">Realizar nova consulta</button>
+        </div>
+        <a href="#container_capa"><i class="fas fa-sort-up"></i></a>
     </div>
 
 </body>

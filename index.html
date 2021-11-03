@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!--Container da primeira página do site-->
     <div class="container_capa" id="container_capa">
         <nav>
             <a href="https://github.com/dvitorio" target="blanck">Sobre</a>
             <a href="#container_imc">Cálculo de IMC</a>
-            <a href="#">Cintura/Quadril</a>
+            <a href="#container_cintura">Cintura/Quadril</a>
             <a href="" id="contato">Contato</a>
         </nav>
         <div class="figura_fundo">
@@ -23,13 +24,15 @@
         <h1>NutriWeb</h1>
         <h2>O seu guia de nutrição na Internet</h2>
     </div>
+    <!--Final da primeira página-->
 
+    <!--Container de cálculo de IMC-->
     <div class="container_calculos" id="container_imc">
         <h3>Índice de Massa Corporal (IMC)</h3>
         <div class="caixa_imc">
-            <h4>Peso</h4>
+            <h4>Peso (kg)</h4>
             <input type="text" id="peso">
-            <h4>Altura</h4>
+            <h4>Altura (m)</h4>
             <input type="text" id="altura" onchange="calcularIMC()">
             <h4>IMC</h4>
             <input type="text" id="imc" onchange="calcularIMC()">
@@ -38,9 +41,11 @@
         </div>
         <a href="#container_capa"><i class="fas fa-sort-up"></i></a>
     </div>
+    <!--Final do container de cálculo de IMC-->
 
+    <!--Container de relação cintura/quadril-->
     <div class="container_calculos" id="container_cintura">
-        <h3>Relação Cibtura/Quadril</h3>
+        <h3>Relação Cintura/Quadril (RCQ)</h3>
         <div class="caixa_imc">
             <div class="sexo_info">
                 <label for="">Masculino</label>
@@ -48,17 +53,18 @@
                 <label for="">Feminino</label>
                 <input type="radio" name="sexo" id="feminino">
             </div>
-            <h4>Peso</h4>
-            <input type="text" id="peso">
-            <h4>Altura</h4>
-            <input type="text" id="altura" onchange="calcularIMC()">
-            <h4>IMC</h4>
-            <input type="text" id="imc" onchange="calcularIMC()">
-            <div id="resultado"></div>
+            <h4>Medida da cintura (cm)</h4>
+            <input type="text" id="cintura">
+            <h4>Medida do quadril (cm)</h4>
+            <input type="text" id="quadril" onchange="cinturaQuadril()">
+            <h4>Relação CQ</h4>
+            <input type="text" id="rcq" onchange="cinturaQuadril()">
+            <div id="resultadoRCQ"></div>
             <button id="btn_limpar" onclick="limpar()">Realizar nova consulta</button>
         </div>
         <a href="#container_capa"><i class="fas fa-sort-up"></i></a>
     </div>
+    <!--Final do container da relação cintura/quadril-->
 
 </body>
 </html>

@@ -48,6 +48,9 @@ nav{
 #contato:active{
     transform: scale(0.9);
 }
+nav{
+    display: block;
+}
 nav a{
     margin-right: 4vw;
     color: white;
@@ -144,7 +147,7 @@ button:active{
     margin-right: auto;
 }
 .sexo_info input{
-    margin-left: 5px;
+    margin-left: 30px;
     width: 20px;
 }
 .sexo_info label{
@@ -158,4 +161,51 @@ button:active{
 }
 #btn_limpar{
     min-height: 6vh;
+}
+
+
+@media screen and (min-width: 290px) and (max-width: 960px) {
+    nav{
+        display: none;
+    }
+    .container_capa{
+        width: 100vw;
+        min-height: 100vh;
+    }
+    .container_capa h1, .container_capa h2{
+        text-align: center;
+    }
+    .container_calculos i{
+        display: none;
+    }
+    .container_calculos{
+        width: 98vw;
+        min-height: 100vh;
+        padding: 10px;
+    }
+    .container_calculos h3{
+        font-size: 1.25rem;
+        padding: 10px;
+    }
+    .container_calculos button{
+        width: 90vw;
+        min-height: 7vh;
+    }
+    #resultado{
+        width: 90vw;
+    }
+    .caixa_imc{
+        width: 95vw;
+        min-height: 80vh;
+    }
+    .caixa_imc input{
+        width: 90vw;
+        min-height: 7vh;
+        font-size: 1.35rem;
+    }
+    .sexo_info input{
+        display: inline-block;
+        width: 20px;
+    }
+    
 }

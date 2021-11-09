@@ -37,7 +37,7 @@
             <h4>IMC</h4>
             <input type="text" id="imc" onchange="calcularIMC()">
             <div id="resultado"></div>
-            <button id="btn_limpar" onclick="limpar()">Realizar nova consulta</button>
+            <button id="btn_limpar" onclick="limparIMC()">Realizar nova consulta</button>
         </div>
         <a href="#container_capa"><i class="fas fa-sort-up"></i></a>
     </div>
@@ -48,9 +48,9 @@
         <h3>Relação Cintura/Quadril (RCQ)</h3>
         <div class="caixa_imc">
             <div class="sexo_info">
-                <input type="radio" name="sexo" id="masculino">
+                <input type="radio" name="sexo" id="masculino" value=1>
                 <label for="">Masculino</label>
-                <input type="radio" name="sexo" id="feminino">
+                <input type="radio" name="sexo" id="feminino" value=0>
                 <label for="">Feminino</label>
             </div>
             <h4>Medida da cintura (cm)</h4>
@@ -60,7 +60,7 @@
             <h4>Relação CQ</h4>
             <input type="text" id="rcq" onchange="cinturaQuadril()">
             <div id="resultadoRCQ"></div>
-            <button id="btn_limpar" onclick="limpar()">Realizar nova consulta</button>
+            <button id="btn_limpar" onclick="limparRCQ()">Realizar nova consulta</button>
         </div>
         <a href="#container_capa"><i class="fas fa-sort-up"></i></a>
     </div>

@@ -35,7 +35,7 @@ function calcularIMC(){
         }
     document.getElementById("imc").value = imc.toFixed(2);   
 }
-function limpar(){
+function limparIMC(){
     if(peso!=0 && altura!=0 && imc!=0 && resultado!=0){
         document.getElementById("peso").value = " ";
         document.getElementById("altura").value = " ";
@@ -51,15 +51,51 @@ function limpar(){
 //Cálculo da relação cintura/quadril
 
 function cinturaQuadril(){
-    let cintura = parseFloat(document.getElementById("cintura").value);
-    let quadril = parseFloat(document.getElementById("quadril").value);
-        if((cintura >= 30 && cintura <= 250) && (quadril >= 50 && quadril <=350)){
-            let rcq = (cintura/quadril);
-            document.getElementById("rcq").value = rcq.toFixed(2);
+    var cintura = parseFloat(document.getElementById("cintura").value);
+    var quadril = parseFloat(document.getElementById("quadril").value);
+    var sexo = document.getElementById("masculino").value;
+        if((sexo=='1') && (cintura >= 30 && cintura <= 250) && (quadril >= 50 && quadril <=350)){
+            var rcq = (cintura/quadril);
+            if(rcq <= 0.80){
+                document.getElementById("rcq").value = rcq.toFixed(2);
+                var textoRCQ = document.getElementById("resultadoRCQ");
+                textoRCQ.innerText = "Sua relação cintura-quadril é considerada IDEAL";
+                textoRCQ.style.color = "green";
+            }
+            else if(rcq > 0.80 && rcq <= 0.95){
+                document.getElementById("rcq").value = rcq.toFixed(2);
+                var textoRCQ = document.getElementById("resultadoRCQ");
+                textoRCQ.innerText = "Sua relação cintura-quadril é considerada de BAIXO RISCO!";
+                textoRCQ.style.color = "orangered";
+            }
+            else if(rcq > 0.95 && rcq <= 0.99){
+                document.getElementById("rcq").value = rcq.toFixed(2);
+                var textoRCQ = document.getElementById("resultadoRCQ");
+                textoRCQ.innerText = "Sua relação cintura-quadril é considerada de RISCO MODERADO!";
+                textoRCQ.style.color = "red";
+            }
+            else{
+                document.getElementById("rcq").value = rcq.toFixed(2);
+                var textoRCQ = document.getElementById("resultadoRCQ");
+                textoRCQ.innerText = "Sua relação cintura-quadril é considerada de ALTO RISCO!";
+                textoRCQ.style.color = "red";
+            }
         }
         else{
             alert("Valor(es) da cintura ou quadril inválido(s)! Confira os dados e digite novamente!");
         }
-
 }   
+
+function limparRCQ(){
+    if(cintura!=0 && quadril!=0 && rcq!=0 && resultado!=0){
+        document.getElementById("cintura").value = " ";
+        document.getElementById("quadril").value = " ";
+        document.getElementById("rcq").value = " ";
+        document.getElementById("resultadoRCQ").value = " ";
+        var texto = document.getElementById("resultadoRCQ");
+        texto.innerText = " ";
+    }   
+}
+//Fim do cálculo de RCQ
+
 

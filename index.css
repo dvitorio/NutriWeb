@@ -121,6 +121,9 @@ nav a:hover{
     padding: 5px;
     text-align: center;
 }
+#resultadoRCQ{
+    margin: 1vh auto;
+}
 button{
     background-color: orangered;
     border: none;

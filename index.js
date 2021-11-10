@@ -51,9 +51,9 @@ function limparIMC(){
 //Cálculo da relação cintura/quadril
 
 function cinturaQuadril(){
+    var sexo = document.getElementById("masculino").value;
     var cintura = parseFloat(document.getElementById("cintura").value);
     var quadril = parseFloat(document.getElementById("quadril").value);
-    var sexo = document.getElementById("masculino").value;
         if((sexo=='1') && (cintura >= 30 && cintura <= 250) && (quadril >= 50 && quadril <=350)){
             var rcq = (cintura/quadril);
             if(rcq <= 0.80){
@@ -76,6 +76,41 @@ function cinturaQuadril(){
             }
             else{
                 document.getElementById("rcq").value = rcq.toFixed(2);
+                var textoRCQ = document.getElementById("resultadoRCQ");
+                textoRCQ.innerText = "Sua relação cintura-quadril é considerada de ALTO RISCO!";
+                textoRCQ.style.color = "red";
+            }
+        }
+        else if((sexo=='0') && (cintura >= 30 && cintura <= 240) && (quadril >= 60 && quadril <=360)){
+            var rcq = (cintura/quadril);
+            if(rcq <= 0.70){
+                document.getElementById("rcq").value = rcq.toFixed(2);
+                var resRCQ = document.getElementById("rcq").value;
+                resRCQ.style.color = "green";
+                var textoRCQ = document.getElementById("resultadoRCQ");
+                textoRCQ.innerText = "Sua relação cintura-quadril é considerada IDEAL";
+                textoRCQ.style.color = "green";
+            }
+            else if(rcq > 0.70 && rcq <= 0.80){
+                document.getElementById("rcq").value = rcq.toFixed(2);
+                var resRCQ = document.getElementById("rcq").value;
+                resRCQ.style.color = "orangered";
+                var textoRCQ = document.getElementById("resultadoRCQ");
+                textoRCQ.innerText = "Sua relação cintura-quadril é considerada de BAIXO RISCO!";
+                textoRCQ.style.color = "orangered";
+            }
+            else if(rcq > 0.80 && rcq <= 0.84){
+                document.getElementById("rcq").value = rcq.toFixed(2);
+                var resRCQ = document.getElementById("rcq").value;
+                resRCQ.style.color = "red";
+                var textoRCQ = document.getElementById("resultadoRCQ");
+                textoRCQ.innerText = "Sua relação cintura-quadril é considerada de RISCO MODERADO!";
+                textoRCQ.style.color = "red";
+            }
+            else{
+                document.getElementById("rcq").value = rcq.toFixed(2);
+                var resRCQ = document.getElementById("rcq").value;
+                resRCQ.style.color = "red";
                 var textoRCQ = document.getElementById("resultadoRCQ");
                 textoRCQ.innerText = "Sua relação cintura-quadril é considerada de ALTO RISCO!";
                 textoRCQ.style.color = "red";

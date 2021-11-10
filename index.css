@@ -17,7 +17,7 @@ html{
     width: 100vw;
     height: 100vh;
     border: 1px solid lightgrey;
-    background-color: rgb(17, 17, 17);
+    background-color: rgb(39, 235, 225);
 }
 .container_capa h1{
     font-size: 5rem;
@@ -35,6 +35,7 @@ nav{
     left: 50vw;
 }
 #contato{
+    color: white;
     width: 12vw;
     height: 6vh;
     border-radius: 5px;
@@ -53,7 +54,8 @@ nav{
 }
 nav a{
     margin-right: 4vw;
-    color: white;
+    color: rgb(30, 139, 103);
+    font-weight: bolder;
     padding: 10px;
 }
 nav a:hover{
@@ -98,16 +100,22 @@ nav a:hover{
     margin: 10px auto;
 }
 #imc{
+    border: 1px solid lightgrey;
+    box-shadow: 2px 2px 5px grey;
     color: darkred;
     font-size: 3.5rem;
     height: 15vh;
     text-align: center;
+    outline: 0;
 }
 .caixa_imc input{
+    border-radius: 5px;
     color: grey;
+    border: 1px solid lightgrey;
+    box-shadow: 2px 2px 5px grey;
     font-size: 1.5rem;
     width: 20vw;
-    height: 6vh;
+    min-height: 6vh;
     margin: 2vh auto;
     outline: 0;
     text-align: center;
@@ -141,6 +149,9 @@ button:hover{
 button:active{
     transform: scale(0.9);
 }
+#masculino, #feminino{
+    box-shadow: none;
+}
 .sexo_info{
     display: flex;
     align-items: center;
@@ -164,6 +175,11 @@ button:active{
 }
 #btn_limpar{
     min-height: 6vh;
+}
+.rodape{
+    width: 100vw;
+    min-height: 20vh;
+    background-color: rgb(39, 235, 225);
 }
 
 
@@ -209,6 +225,5 @@ button:active{
     .sexo_info input{
         display: inline-block;
         width: 20px;
-    }
-    
+    }   
 }

@@ -17,7 +17,7 @@ html{
     width: 100vw;
     min-height: 100vh;
     border: 1px solid lightgrey;
-    background-color: rgb(39, 235, 225);
+    background-color: rgb(13, 138, 131);
 }
 .container_capa h1{
     font-size: 5rem;
@@ -30,9 +30,21 @@ html{
     text-shadow: 2px 1px 1px black;
 }
 nav{
+    display: block;
     position: absolute;
     top: 5vh;
     left: 50vw;
+}
+nav a{
+    margin-right: 4vw;
+    color: white;
+    font-weight: bolder;
+    padding: 10px;
+}
+nav a:hover{
+    cursor: pointer;
+    background-color: white;
+    color:rgb(15, 160, 185);
 }
 #contato{
     color: white;
@@ -48,20 +60,6 @@ nav{
 }
 #contato:active{
     transform: scale(0.9);
-}
-nav{
-    display: block;
-}
-nav a{
-    margin-right: 4vw;
-    color: rgb(30, 139, 103);
-    font-weight: bolder;
-    padding: 10px;
-}
-nav a:hover{
-    cursor: pointer;
-    background-color: white;
-    color:rgb(15, 160, 185);
 }
 .container_calculos{
     width: 40vw;
@@ -179,13 +177,14 @@ button:active{
 .rodape{
     width: 100vw;
     min-height: 20vh;
-    background-color: rgb(39, 235, 225);
+    background-color: rgb(13, 138, 131);
     color: white;
     text-shadow: 1px 1px 1px black;
     text-align: center;
 }
 .rodape h3{
     font-size: small;
+    letter-spacing: 5px;
     margin: 10px;
     padding-top: 10px;
 }

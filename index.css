@@ -28,36 +28,40 @@ html{
     color: rgb(13, 138, 131);
 }
 nav{
-    display: block;
+    border-radius: 5px;
+    display: inline-block;
     position: absolute;
-    top: 5vh;
-    left: 50vw;
+    width: 15vw;
+    height: 30vh;
+    top: 2vh;
+    left: -14vw;
+    background-color: rgb(8, 112, 78);
+}
+nav:hover{
+    display: inline-block;
+    position: absolute;
+    width: 15vw;
+    top: 2vh;
+    left: 1vw;
+    background-color: rgb(8, 112, 78);
+    transition: all 1s;
 }
 nav a{
-    margin-right: 4vw;
-    color: rgb(13, 138, 131);
+    display: block;    
+    background-color: rgb(45, 175, 169);
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px black;
+    color: white;
     font-weight: bolder;
+    margin: 10px 20px;
     padding: 10px;
 }
 nav a:hover{
     cursor: pointer;
-    background-color: rgb(15, 160, 185);
+    background-color: rgb(13, 101, 141);
     color:white;
-}
-#contato{
-    color: white;
-    width: 12vw;
-    height: 6vh;
-    border-radius: 5px;
-    background-color: orange;
-}
-#contato:hover{
-    background-color: orangered;
-    color: white;
-    box-shadow: 5px 5px 5px black;
-}
-#contato:active{
-    transform: scale(0.9);
+    text-align: center;
+    transform: scale(1.1);
 }
 .container_calculos{
     width: 40vw;
@@ -129,7 +133,7 @@ nav a:hover{
     margin: 1vh auto;
 }
 button{
-    background-color: orangered;
+    background-color: rgb(30, 183, 221);
     border: none;
     border-radius: 5px;
     box-shadow: 5px 5px 10px black;

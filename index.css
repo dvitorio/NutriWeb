@@ -22,12 +22,10 @@ html{
 .container_capa h1{
     font-size: 5rem;
     color: rgb(13, 138, 131);
-    text-shadow: 3px 2px 1px black;
 }
 .container_capa h2{
     font-size: 2rem;
     color: rgb(13, 138, 131);
-    text-shadow: 2px 1px 1px black;
 }
 nav{
     display: block;

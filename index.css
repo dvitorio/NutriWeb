@@ -15,7 +15,7 @@ html{
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     border: 1px solid lightgrey;
     background-color: rgb(39, 235, 225);
 }
@@ -65,7 +65,7 @@ nav a:hover{
 }
 .container_calculos{
     width: 40vw;
-    height: 90vh;
+    min-height: 90vh;
     background-color: rgb(240, 231, 231);
     border: 1px solid lightgrey;
     border-radius: 10px;
@@ -161,7 +161,7 @@ button:active{
     margin-right: auto;
 }
 .sexo_info input{
-    margin-left: 30px;
+    margin-left: 10px;
     width: 20px;
 }
 .sexo_info label{
@@ -180,6 +180,14 @@ button:active{
     width: 100vw;
     min-height: 20vh;
     background-color: rgb(39, 235, 225);
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+}
+.rodape h3{
+    font-size: small;
+    margin: 10px;
+    padding-top: 10px;
 }
 
 
@@ -215,15 +223,21 @@ button:active{
     }
     .caixa_imc{
         width: 95vw;
-        min-height: 80vh;
+        min-height: 100vh;
     }
     .caixa_imc input{
         width: 90vw;
         min-height: 7vh;
         font-size: 1.35rem;
     }
-    .sexo_info input{
+    .sexo_info{
         display: inline-block;
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .sexo_info input{
+        display: block;
         width: 20px;
     }   
 }

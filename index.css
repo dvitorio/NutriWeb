@@ -17,16 +17,16 @@ html{
     width: 100vw;
     min-height: 100vh;
     border: 1px solid lightgrey;
-    background-color: rgb(13, 138, 131);
+    background-color: white;
 }
 .container_capa h1{
     font-size: 5rem;
-    color: white;
+    color: rgb(13, 138, 131);
     text-shadow: 3px 2px 1px black;
 }
 .container_capa h2{
     font-size: 2rem;
-    color: white;
+    color: rgb(13, 138, 131);
     text-shadow: 2px 1px 1px black;
 }
 nav{
@@ -37,14 +37,14 @@ nav{
 }
 nav a{
     margin-right: 4vw;
-    color: white;
+    color: rgb(13, 138, 131);
     font-weight: bolder;
     padding: 10px;
 }
 nav a:hover{
     cursor: pointer;
-    background-color: white;
-    color:rgb(15, 160, 185);
+    background-color: rgb(15, 160, 185);
+    color:white;
 }
 #contato{
     color: white;

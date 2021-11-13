@@ -201,7 +201,9 @@ button:active{
 
 @media screen and (min-width: 290px) and (max-width: 960px) {
     nav{
-        display: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
     .container_capa{
         width: 100vw;

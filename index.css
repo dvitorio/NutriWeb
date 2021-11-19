@@ -1,10 +1,6 @@
 @keyframes menu {
-    0%{
-        margin-left: -25vw;
-    }
-    100%{
-        margin-left: 1vw;
-    }
+    0%{margin-left: -25vw}
+    100%{margin-left: 1vw}
 }
 
 html{
@@ -44,13 +40,13 @@ nav{
     height: 30vh;
     top: 2vh;
     left: 1vw;
-    background-color: rgb(8, 112, 78);
+    background-color: rgb(13, 101, 141);
     animation: menu 2s;
     transition: all 2s;
 }
 nav a{
     display: block;    
-    background-color: rgb(66, 121, 118);
+    background-color: rgb(13, 138, 131);
     border-radius: 5px;
     box-shadow: 2px 2px 4px black;
     color: white;
@@ -64,6 +60,22 @@ nav a:hover{
     color:white;
     transform: scale(1.1);
 }
+.caixa_midias{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 20vw;
+    height: 8vh;
+    top: 1vh;
+    left: 78vw;
+}
+.caixa_midias i{
+    color:rgb(13, 138, 131);
+    font-size: 2.5rem;
+    margin-right: 2vw;
+}
+
 .figura_fundo img{
     display: block;
     margin-left: auto;

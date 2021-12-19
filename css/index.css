@@ -1,8 +1,3 @@
-@keyframes menu {
-    0%{margin-left: -25vw}
-    100%{margin-left: 1vw}
-}
-
 html{
     scroll-behavior: smooth;
 }
@@ -32,33 +27,76 @@ html{
     font-size: 2rem;
     color: rgb(13, 138, 131);
 }
-nav{
-    border-radius: 5px;
-    display: inline-block;
-    position: absolute;
-    width: 15vw;
-    height: 30vh;
-    top: 2vh;
-    left: 1vw;
-    background-color: rgb(13, 101, 141);
-    animation: menu 2s;
-    transition: all 2s;
+.caixa_midias{
+    display: flex;
 }
-nav a{
-    display: block;    
-    background-color: rgb(13, 138, 131);
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(13, 101, 141);
+    width: 100vw;
+    min-height: 15vh;
+}
+#areaRestrita{
+    background-color: white;
+    border-radius: 5px;
+    color:darkred;
+}
+#areaRestrita:hover{
     border-radius: 5px;
     box-shadow: 2px 2px 4px black;
-    color: white;
-    font-weight: bolder;
-    margin: 10px 20px;
-    padding: 10px;
+    color:rgb(13, 101, 141);
+    transform: scale(1.05);
 }
-nav a:hover{
-    cursor: pointer;
-    background-color: rgb(13, 101, 141);
-    color:white;
-    transform: scale(1.1);
+{
+    /*display: none;*/
+    background-color: white;
+    box-shadow: 2px 2px 4px grey;
+    color: grey;
+    position: absolute;
+    width: 40vw;
+    min-height: 45vh;
+    border: 1px solid grey;
+    border-radius: 5px;
+    top: 20vh;
+    left: 30vw;
+    z-index: 200;
+}
+.login h2{
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
+.login input{
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    width: 30vw;
+    min-height: 5vh;
+    box-shadow: 2px 2px 4px lightgrey;
+    padding: 10px;
+    margin-left: 30px;
+    outline: 0;
+}   
+.login h3{
+    padding: 10px;
+    margin-left: 20px;
+}
+#botoesLogin{
+    width: 25vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+#botoesLogin button{
+    width: 10vw;
+    height: 4h;
+    background-color: rgb(111, 216, 211);
+    border-radius: 0;
+    box-shadow: 2px 2px 4px grey;
+    color:rgb(28, 146, 130);
+    margin-top: 2vh;
+    margin-right: 2vw;
 }
 .caixa_midias{
     position: absolute;
@@ -90,7 +128,7 @@ nav a:hover{
     border: 1px solid lightgrey;
     border-radius: 10px;
     box-shadow: 5px 5px 10px grey;
-    margin: 5vh auto;
+    margin: 3vh auto;
 }
 .container_calculos h3{
     color: slategray;
@@ -263,4 +301,9 @@ button:active{
         display: block;
         width: 20px;
     }   
+    .container-formulario{
+        display: block;
+        margin: auto;
+        width: 100vw;
+    }
 }

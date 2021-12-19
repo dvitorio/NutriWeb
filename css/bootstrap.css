@@ -1,0 +1,39 @@
+.container-fluid{
+    background-color: cornflowerblue;
+    position: absolute;
+    top: 0;
+    min-height: 10vh;
+}
+.navbar-brand{
+    font-size: 2em;
+}
+.nav-link{
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+.collapse a:hover{
+    border-radius: 5px;
+    background-color: white;
+}
+#titulo{
+    color: white;
+    font-size: 3rem;
+}
+.container-formulario{
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    color: grey;
+    width: 70vw;
+    margin: auto;
+    padding: 20px;
+}
+.form-check-inline, .form-check{
+    margin: 20px 10px;
+}
+button{
+    margin: 10px;
+    width: 12vw;
+}
+.btn-outline-primary{
+    margin: 20px 0;
+}

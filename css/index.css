@@ -236,7 +236,7 @@ button:active{
 }
 .rodape{
     width: 100vw;
-    min-height: 20vh;
+    min-height: 15vh;
     background-color: rgb(13, 138, 131);
     color: white;
     text-shadow: 1px 1px 1px black;
@@ -245,8 +245,8 @@ button:active{
 .rodape h3{
     font-size: small;
     letter-spacing: 5px;
-    margin: 10px;
-    padding-top: 10px;
+    margin: 5px;
+    padding-top: 5px;
 }
 
 
@@ -305,5 +305,9 @@ button:active{
         display: block;
         margin: auto;
         width: 100vw;
+    }
+    .btn{
+        width: 40vw;
+        margin: 5px auto;
     }
 }

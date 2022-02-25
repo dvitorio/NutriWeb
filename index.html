@@ -4,131 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NutriWeb Serviços para Nutricionistas</title>
+    <title>NutriWeb - login</title>
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
     <script src="js/index.js"></script>
-    <script src="js/menu.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/principal.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Varela+Round&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Love+Light&family=Montserrat&family=Open+Sans&family=Roboto:ital,wght@0,300;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
+
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" id="titulo" href="#">NutriWeb</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Sobre</a>
-              <a class="nav-link" href="#container_imc">Índice de Massa Corporal</a>
-              <a class="nav-link" href="#container_cintura">Relação Cintura/Quadril</a>
-              <a class="nav-link" href="#formulario">Contato</a>
-            </div>
-          </div>
+    
+    <div class="containerGeral animate__animated animate__backInDown">
+        <div class="containerImagem">
+            <img src="img/medica.png" alt="">
         </div>
-      </nav>
 
-
-    <!--Container da primeira página do site-->
-    <div class="container_capa" id="container_capa">  
-        <div class="figura_fundo">
-            <img src="img/nutricionista.jpg" alt="Figura de fundo" width=300>
-        </div>
-        <h1>NutriWeb</h1>
-        <h2>O seu guia de nutrição na Internet</h2>
-    </div>
-    <!--Final da primeira página-->
-
-    <!--Container de cálculo de IMC-->
-    <div class="container_calculos" id="container_imc">
-        <h3>Índice de Massa Corporal (IMC)</h3>
-        <div class="caixa_imc">
-            <h4>Peso (kg)</h4>
-            <input type="text" id="peso">
-            <h4>Altura (m)</h4>
-            <input type="text" id="altura" onchange="calcularIMC()">
-            <h4>IMC</h4>
-            <input type="text" id="imc" onchange="calcularIMC()">
-            <div id="resultado"></div>
-            <button id="btn_limpar" onclick="limparIMC()">Realizar nova consulta</button>
-        </div>
-        <a href="#container_capa"><i class="fas fa-sort-up"></i></a>
-    </div>
-    <!--Final do container de cálculo de IMC-->
-
-    <!--Container de relação cintura/quadril-->
-    <div class="container_calculos" id="container_cintura">
-        <h3>Relação Cintura/Quadril (RCQ)</h3>
-        <div class="caixa_imc">
-            <div class="sexo_info">
-                <label for="">Masculino</label>
-                <input type="radio" name="sexo" id="masculino" value=1>
-                <label for="">Feminino</label>
-                <input type="radio" name="sexo" id="feminino" value=0>
+        <div class="containerLogin">
+            <img src="img/logo.png" width=250 alt="">
+            <h4>Digite seu login e senha para acessar o sistema</h4>
+            <input type="email" id="usuarioLogin" placeholder="E-mail de usuário">
+            <input type="password" id="senhaLogin" placeholder="Senha de acesso">
+            <div class="botoesLogin">
+                <button id="btnAcessar" onclick="login()">Acessar</button>
+                <button id="btnCancelar">Cancelar</button>
             </div>
-            <h4>Medida da cintura (cm)</h4>
-            <input type="text" id="cintura">
-            <h4>Medida do quadril (cm)</h4>
-            <input type="text" id="quadril" onchange="cinturaQuadril()">
-            <h4>RCQ</h4>
-            <input type="text" id="rcq" onchange="cinturaQuadril()">
-            <div id="resultadoRCQ"></div>
-            <button id="btn_limpar" onclick="limparRCQ()">Realizar nova consulta</button>
-        </div>
-        <a href="#container_capa"><i class="fas fa-sort-up"></i></a>
-    </div>
-    <!--Final do container da relação cintura/quadril-->
+            <h6>Esqueceu sua senha ou login? Clique <a href=""> aqui </a>e recupere seu acesso.</h6>
 
-    <!--Formulário de contato-->
-        <div class="container-formulario" id="formulario">
-            <h3 style="color: grey; text-align: center;">Preencha o formulário de contato para obter mais informações</h1>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="seu nome completo">
-                <label for="floatingInput">Nome completo</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="digite seu email">
-                <label for="floatingInput">Email</label>
-            </div>
-            <form class="form-floating">
-                <input type="tel" class="form-control" id="floatingInputValue" placeholder="digite seu telefone">
-                <label for="floatingInputValue">Telefone</label>
-            </form>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">Estudante</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">Nutricionista</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                <label class="form-check-label" for="inlineRadio3">Paciente</label>
-              </div>
-            <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                <label for="floatingTextarea2">Deixe aqui sua mensagem</label>
-            </div>
-            <button type="button" class="btn btn-outline-primary" value="Submit">Enviar</button>
-            <button type="button" class="btn btn-outline-primary" value="Reset">Cancelar</button>
         </div>
-    <!--Final do formulário-->
-
-    <div class="rodape">
-        <h3>Desenvolvido por Daniel Vitorio</h3>
-        <h3>dvitorio2@gmail.com</h3>
-        <h3>(71) 9 83009859</h3>
     </div>
 
 </body>
+
 </html>

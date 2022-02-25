@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriWeb - home</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/principal.css">
+    <script src="js/index.js"></script>
+    <script src="js/principal.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Love+Light&family=Montserrat&family=Open+Sans&family=Roboto:ital,wght@0,300;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+</head>
+
+<body>
+    
+        <div class="cabecalho">
+            <div class="logoMarca">
+                <img src="img/logo.png" alt="">
+            </div>
+
+            <nav class="menu">
+                <a href="#">Sobre</a>
+                <a href="#" onclick="abrirIMC()">Índice Massa Corporal (IMC)</a>
+                <a href="#" onclick="abrirRCQ()">Relação Cintura/Quadril (RCQ)</a>
+                <a href="#">Índice de Adiposidade Corporal (IAC)</a>
+                <a href="#" id="btnAreaRestrita" onclick="areaRestrita()">Área restrita</a>
+            </nav>
+        </div>
+
+        <div class="paginaPrincipal">
+            <div id="caixaIMC" class="imc animate__animated animate__fadeInDownBig">
+                <div class="btnSair" style="margin-left: 250px"><img style="width: 20px;" src="img/fechar.png" alt="" onclick="fecharIMC()"></div>
+                <button class="btnTitulo">IMC</button>
+                <input type="text" id="alturaIMC" placeholder="Altura (metros)">
+                <input type="text" id="pesoIMC" placeholder="Peso (quilos)">
+                <button class="btnCalcular" onclick="calcularIMC()">Calcular</button>
+                <input type="text" disabled="" id="resultadoIMC" style="height: 80px; font-size: 2rem; text-align:center">
+                <div class="botoesControle">
+                    <button class="btnTitulo">Cancelar</button>
+                    <button class="btnTitulo" onclick="limparCamposIMC()">Nova</button>
+                </div>
+            </div>
+
+            <div id="caixaRCQ" class="rcq animate__animated animate__fadeInDownBig">
+                <div class="btnSair" style="margin: 10px 0 0 280px"><img style="width: 20px;" src="img/fechar.png" alt="" onclick="fecharRCQ()"></div>
+                <button class="btnTitulo">RCQ</button>
+                <div class="sexo">
+                    Homem<input type="radio" name="sexo" id="homem">
+                    Mulher<input type="radio" name="sexo" id="mulher">
+                </div>
+                <input type="text" id="cintura" placeholder="Cintura (centímetros)">
+                <input type="text" id="quadril" placeholder="Quadril (centímetros)">
+                <button class="btnCalcular" onclick="calcularRCQ()">Calcular</button>
+                <input type="text" disabled="" id="resultadoRCQ" style="height: 80px; font-size: 2rem; text-align:center">
+                <div class="botoesControle">
+                    <button class="btnTitulo">Cancelar</button>
+                    <button class="btnTitulo" onclick="limparCamposRCQ()">Nova</button>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

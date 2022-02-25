@@ -1,313 +1,91 @@
-html{
-    scroll-behavior: smooth;
-}
 *{
-    box-sizing: border-box;
-    font-size: 16px;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    text-decoration: none;
+    box-sizing: border-box;
+    font-size: 14px;
 }
-.container_capa{
+.containerGeral{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(7, 7, 51, 0.781);
+}
+.containerImagem, .containerLogin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    min-height: 100vh;
-    border: 1px solid lightgrey;
+    width: 35vw;
+    height: 80vh;
     background-color: white;
+    border: 1px solid rgb(143, 201, 240);
 }
-.container_capa h1{
-    font-size: 5rem;
-    color: rgb(13, 138, 131);
+.containerImagem{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background-color: rgba(133, 199, 243, 0.685);
 }
-.container_capa h2{
-    font-size: 2rem;
-    color: rgb(13, 138, 131);
+.containerImagem img{
+    max-width: 350px;
+    width: 100%;
 }
-.caixa_midias{
-    display: flex;
+.containerLogin{
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
-.titulo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(13, 101, 141);
-    width: 100vw;
-    min-height: 15vh;
+.containerLogin h4, ::placeholder{
+    color: cornflowerblue;
 }
-#areaRestrita{
-    background-color: white;
+.containerLogin h4{
+    margin-bottom: 15px;
+}
+.containerLogin input{
+    width: 75%;
+    height: 40px;
+    border: 1px solid rgb(178, 200, 240);
     border-radius: 5px;
-    color:darkred;
-}
-#areaRestrita:hover{
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px black;
-    color:rgb(13, 101, 141);
-    transform: scale(1.05);
-}
-{
-    /*display: none;*/
-    background-color: white;
-    box-shadow: 2px 2px 4px grey;
-    color: grey;
-    position: absolute;
-    width: 40vw;
-    min-height: 45vh;
-    border: 1px solid grey;
-    border-radius: 5px;
-    top: 20vh;
-    left: 30vw;
-    z-index: 200;
-}
-.login h2{
-    text-transform: uppercase;
-    text-align: center;
-    margin-top: 2vh;
-    margin-bottom: 1vh;
-}
-.login input{
-    border: 1px solid lightgrey;
-    border-radius: 5px;
-    width: 30vw;
-    min-height: 5vh;
+    margin: 10px;
+    padding-left: 10px;
+    outline: 0;
     box-shadow: 2px 2px 4px lightgrey;
-    padding: 10px;
-    margin-left: 30px;
-    outline: 0;
-}   
-.login h3{
-    padding: 10px;
-    margin-left: 20px;
+    font-size: 16px;
+    color: cornflowerblue;
 }
-#botoesLogin{
-    width: 25vw;
-    margin-left: auto;
-    margin-right: auto;
+.containerLogin img{
+    margin-bottom: 10px;
 }
-#botoesLogin button{
-    width: 10vw;
-    height: 4h;
-    background-color: rgb(111, 216, 211);
-    border-radius: 0;
-    box-shadow: 2px 2px 4px grey;
-    color:rgb(28, 146, 130);
-    margin-top: 2vh;
-    margin-right: 2vw;
-}
-.caixa_midias{
-    position: absolute;
+.botoesLogin{
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 20vw;
-    height: 8vh;
-    top: 1vh;
-    left: 78vw;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 70%;
+    height: 40px;
+    margin-top: 15px;
 }
-.caixa_midias i{
-    color:rgb(13, 138, 131);
-    font-size: 2.5rem;
-    margin-right: 2vw;
-}
-
-.figura_fundo img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    border-radius: 50%;
-}
-.container_calculos{
-    width: 40vw;
-    min-height: 90vh;
-    background-color: rgb(240, 231, 231);
-    border: 1px solid lightgrey;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px grey;
-    margin: 3vh auto;
-}
-.container_calculos h3{
-    color: slategray;
-    display: block;
-    font-size: 1.5rem;
-    text-align: center;
-    letter-spacing: 2px;
-    margin-top: 2vh; 
-}
-.container_calculos i{
-    color: slategrey;
-    font-size: 2rem;
-    margin-right: 40px;
-    float: right;
-}
-.caixa_imc{
-    display: flex;
-    flex-direction: column;
-    width: 30vw;
-    height: 70vh;
-    border: 1px solid rgb(194, 187, 187);
-    margin: 2vh auto;
-    padding: 10px;
-}
-.caixa_imc h4{
-    color: slategray;
-    margin: 10px auto;
-}
-#imc{
-    border: 1px solid lightgrey;
-    box-shadow: 2px 2px 5px grey;
-    color: darkred;
-    font-size: 3.5rem;
-    height: 15vh;
-    text-align: center;
-    outline: 0;
-}
-.caixa_imc input{
-    border-radius: 5px;
-    color: grey;
-    border: 1px solid lightgrey;
-    box-shadow: 2px 2px 5px grey;
-    font-size: 1.5rem;
-    width: 20vw;
-    min-height: 6vh;
-    margin: 2vh auto;
-    outline: 0;
-    text-align: center;
-}
-#resultado{
-    font-size: 1.2rem;
-    color: white;
-    width: 25vw;
-    height: 7vh;
-    margin: auto;
-    padding: 5px;
-    text-align: center;
-}
-#resultadoRCQ{
-    margin: 1vh auto;
-}
-button{
-    background-color: rgb(30, 183, 221);
+.botoesLogin button{
+    width: 150px;
+    height: 40px;
     border: none;
     border-radius: 5px;
-    box-shadow: 5px 5px 10px black;
+    background-color: rgb(55, 120, 241);
+    box-shadow: 2px 2px 4px grey;
     color: white;
-    width: 20vw;
-    height: 7vh;
-    margin: 1vh auto;
+    outline: 0;
 }
-button:hover{
+.botoesLogin button:hover{
+    background-color: rgb(23, 89, 212);
     cursor: pointer;
-    background-color: darkgoldenrod;
+    transform: scale(1.05);
+    transition: all 0.3s;
 }
-button:active{
+.botoesLogin button:active{
     transform: scale(0.9);
 }
-#masculino, #feminino{
-    box-shadow: none;
-}
-.sexo_info{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20vw;
-    margin-left: auto;
-    margin-right: auto;
-}
-.sexo_info input{
-    margin-left: 10px;
-    width: 20px;
-}
-.sexo_info label{
-    text-align: center;
-}
-#rcq{
-    color: darkred;
-    font-size: 3.5rem;
-    min-height: 15vh;
-    text-align: center;
-}
-#btn_limpar{
-    min-height: 6vh;
-}
-.rodape{
-    width: 100vw;
-    min-height: 15vh;
-    background-color: rgb(13, 138, 131);
-    color: white;
-    text-shadow: 1px 1px 1px black;
-    text-align: center;
-}
-.rodape h3{
-    font-size: small;
-    letter-spacing: 5px;
-    margin: 5px;
-    padding-top: 5px;
-}
-
-
-@media screen and (min-width: 250px) and (max-width: 900px) {
-    nav{
-        display: none;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .container_capa{
-        width: 100vw;
-        min-height: 100vh;
-    }
-    .container_capa h1, .container_capa h2{
-        text-align: center;
-    }
-    .container_calculos i{
-        display: none;
-    }
-    .container_calculos{
-        width: 98vw;
-        min-height: 100vh;
-        padding: 10px;
-    }
-    .container_calculos h3{
-        font-size: 1.25rem;
-        padding: 10px;
-    }
-    .container_calculos button{
-        width: 90vw;
-        min-height: 7vh;
-    }
-    #resultado{
-        width: 90vw;
-    }
-    .caixa_imc{
-        width: 95vw;
-        min-height: 100vh;
-    }
-    .caixa_imc input{
-        width: 90vw;
-        min-height: 7vh;
-        font-size: 1.35rem;
-    }
-    .sexo_info{
-        display: inline-block;
-        width: 80vw;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .sexo_info input{
-        display: block;
-        width: 20px;
-    }   
-    .container-formulario{
-        display: block;
-        margin: auto;
-        width: 100vw;
-    }
-    .btn{
-        width: 40vw;
-        margin: 5px auto;
-    }
+.containerLogin h6, .containerLogin a{
+    margin: 20px 0;
+    font-size: 10px;
+    color:rgb(55, 120, 241)
 }

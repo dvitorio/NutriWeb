@@ -27,11 +27,12 @@
                 <a href="#">Sobre</a>
                 <a href="#" onclick="abrirIMC()">Índice Massa Corporal (IMC)</a>
                 <a href="#" onclick="abrirRCQ()">Relação Cintura/Quadril (RCQ)</a>
-                <a href="#">Índice de Adiposidade Corporal (IAC)</a>
+                <a href="#" onclick="abrirIAC()">Índice de Adiposidade Corporal (IAC)</a>
                 <a href="#" id="btnAreaRestrita" onclick="areaRestrita()">Área restrita</a>
             </nav>
         </div>
 
+        <!--Conteúdo das medidas e índices antropométricos-->
         <div class="paginaPrincipal">
             <div id="caixaIMC" class="imc animate__animated animate__fadeInDownBig">
                 <div class="btnSair" style="margin-left: 250px"><img style="width: 20px;" src="img/fechar.png" alt="" onclick="fecharIMC()"></div>
@@ -43,6 +44,19 @@
                 <div class="botoesControle">
                     <button class="btnTitulo">Cancelar</button>
                     <button class="btnTitulo" onclick="limparCamposIMC()">Nova</button>
+                </div>
+
+                <div id="caixaResultadoIMC" class="caixaResultadoIMC">
+                    <h5>Resultados do IMC</h5>
+                    <div class="foto">
+                        <img src="img/pessoa.png" width=80 alt="">
+                    </div>
+                    <h3>Peso:</h3><input type="text" disabled="" id="pesoResultadoIMC">
+                    <h3>Altura:</h3><input type="text" disabled="" id="alturaResultadoIMC">
+                    <h3>IMC:</h3>
+                    <div id="conclusaoIMC">
+
+                    </div>
                 </div>
             </div>
 
@@ -62,7 +76,26 @@
                     <button class="btnTitulo" onclick="limparCamposRCQ()">Nova</button>
                 </div>
             </div>
+
+            <div id="caixaIAC" class="iac animate__animated animate__fadeInDownBig">
+                <div class="btnSair" style="margin: 10px 0 0 260px"><img style="width: 20px;" src="img/fechar.png" alt="" onclick="fecharIAC()"></div>
+                <button class="btnTitulo">IAC</button>
+                <div class="sexo">
+                    Homem<input type="radio" name="sexo" id="homemIAC">
+                    Mulher<input type="radio" name="sexo" id="mulherIAC">
+                </div>
+                <input type="text" id="alturaIAC" placeholder="Altura (metros)">
+                <input type="text" id="quadrilIAC" placeholder="Quadril (centímetros)">
+                <button class="btnCalcular" onclick="calcularIAC()">Calcular</button>
+                <input type="text" disabled="" id="resultadoIAC" style="height: 80px; font-size: 2rem; text-align:center">
+                <div class="botoesControle">
+                    <button class="btnTitulo">Cancelar</button>
+                    <button class="btnTitulo" onclick="limparCamposIAC()">Nova</button>
+                </div>
+            </div>
+
         </div>
+        <!--Final do conteúdo das medidas e índices antropométricos-->
 
 </body>
 

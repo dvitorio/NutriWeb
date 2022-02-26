@@ -56,7 +56,7 @@
     justify-content: center;
     flex-direction: column;
     top: 21vh;
-    left: 40vw;
+    left: 30vw;
     width: 300px;
     height: 420px;
     background-color: white;
@@ -106,16 +106,25 @@
 ::placeholder{
     font-size: 0.9rem;
 }
+.botoesControle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
 .botoesControle button{
+    width: 100px;
     box-shadow: 3px 3px 6px grey;
     border-radius: 10px;
-    margin-right: 1vw;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+    margin: 5px;
 }
 .botoesControle button:hover{
     background-color: cornflowerblue;
+    color: white;
     cursor: pointer;
     transform: scale(1.05);
+    font-weight: normal;
 }
 .botoesControle button:active{
     cursor: pointer;
@@ -129,7 +138,7 @@
     flex-direction: column;
     top: 21vh;
     left: 40vw;
-    width: 330px;
+    width: 350px;
     min-height: 450px;
     background-color: white;
     border-radius: 10px;
@@ -165,4 +174,81 @@
 .sexo input[type=radio]{
     width: 12px;
     box-shadow: none;
+}
+.iac{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 21vh;
+    left: 40vw;
+    width: 300px;
+    height: 440px;
+    background-color: white;
+    border-radius: 10px;
+    visibility: hidden;
+}
+.iac input{
+    width: 250px;
+    height: 45px;
+    margin: 10px;
+    padding: 5px; 
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    box-shadow: 3px 3px 9px lightgrey;
+    outline: 0;
+    text-align: center;
+}
+
+#caixaResultadoIMC{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: 300px;
+    width: 300px;
+    height: 420px;
+    background-color: rgba(17, 29, 138, 0.63);
+    border: 1px solid grey;
+    border-radius: 10px;
+    visibility: hidden;
+}
+#caixaResultadoIMC h5{
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-size: 0.85rem;
+    color: white;
+}
+#caixaResultadoIMC h3{
+    text-align: center;
+    color: white;
+}
+.caixaResultadoIMC input{
+    width: 250px;
+    height: 35px;
+    font-size: 1.25rem;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+.foto{
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    border: 1px solid white;
+}
+#conclusaoIMC{
+    width: 250px;
+    min-height: 70px;
+    background-color: rgb(15, 10, 83);
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    font-size: 0.85rem;
+    color: white;
+    padding: 5px;
+    margin-top: 10px;
+    text-align: center;
 }

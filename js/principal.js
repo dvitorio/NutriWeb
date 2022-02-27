@@ -67,19 +67,48 @@ function abrirRCQ(){
 function calcularRCQ(){
     let cintura = document.getElementById("cintura").value;
     let quadril = document.getElementById("quadril").value;
+        let sexo = document.querySelector('input[name="sexoRCQ"]:checked').value;
         let rcq = parseFloat(cintura)/(parseFloat(quadril));
-    document.getElementById("resultadoRCQ").value = rcq.toFixed(2);
+        let mostrarResultado = document.getElementById("caixaResultadoRCQ");
+        mostrarResultado.style.visibility = 'visible';
+        document.getElementById("cinturaResultadoRCQ").value = cintura.replace(",", ".");
+        document.getElementById("quadrilResultadoRCQ").value = quadril.replace(",", ".");
+        if(sexo === "homem" && rcq < 0.8){
+            document.getElementById("conclusaoRCQ").innerText = "Parabéns! Sua relação cintura/quadril é considerada ideal.";
+        }
+        else if(sexo === "homem" && rcq < 0.95){
+            document.getElementById("conclusaoRCQ").innerText = "Sua relação cintura/quadril é considerada de baixo risco. Continue praticando exercícios e mantendo hábitos alimentares saudáveis";
+        }
+        else if(sexo === "homem" && rcq < 0.99){
+            document.getElementById("conclusaoRCQ").innerText = "Cuidado! Sua relação cintura/quadril é considerada de  risco moderado! Pratique exercícios e mantenha hábitos alimentares saudáveis";
+        }
+        else if(sexo === "homem" && rcq < 1){
+            document.getElementById("conclusaoRCQ").innerText = "Perigo! Sua relação cintura/quadril é considerada de alto risco! Procure um profissional de Nutrição ou Endocrinologista";
+        }
+        else{
+            alert("Preenchimento incorreto! Verifique as informações e tente de novo!");
+        }
+        let conclusaoRCQ = document.getElementById("caixaResultadoRCQ");
+        conclusaoRCQ.style.visibility = 'visible';
+        document.getElementById("resultadoRCQ").value = rcq.toFixed(2);
+
+    
 }
 
 function limparCamposRCQ(){
     document.getElementById("cintura").value = ""; 
     document.getElementById("quadril").value = "";
     document.getElementById("resultadoRCQ").value = "";
+    let conclusaoRCQ = document.getElementById("caixaResultadoRCQ");
+    conclusaoRCQ.style.visibility = 'hidden';
 }
 
 function fecharRCQ(){
     const fecharRCQ = document.getElementById("caixaRCQ");
     fecharRCQ.style.visibility = 'hidden';
+    let conclusaoRCQ = document.getElementById("caixaResultadoRCQ");
+    conclusaoRCQ.style.visibility = 'hidden';
+    limparCamposRCQ();
 }
 
 

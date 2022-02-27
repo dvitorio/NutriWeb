@@ -46,7 +46,7 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 80vh;
+    min-height: 120vh;
     background-color: rgba(31, 79, 168, 0.726);
 }
 .imc{
@@ -239,10 +239,42 @@
     height: 80px;
     border-radius: 50px;
     border: 1px solid white;
+    background-size: cover;
 }
 #conclusaoIMC{
     width: 250px;
     min-height: 70px;
+    background-color: rgb(15, 10, 83);
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    font-size: 0.85rem;
+    color: white;
+    padding: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+.caixaResultadoRCQ{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: 350px;
+    width: 300px;
+    min-height: 450px;
+    background-color: rgba(17, 29, 138, 0.63);
+    border: 1px solid grey;
+    border-radius: 10px;
+    visibility: hidden;
+    color: white;
+}
+.caixaResultadoRCQ input{
+    color: white;
+    font-size: 1.1rem;
+}
+#conclusaoRCQ{
+    width: 250px;
+    min-height: 90px;
     background-color: rgb(15, 10, 83);
     border-radius: 10px;
     border: 1px solid lightgrey;

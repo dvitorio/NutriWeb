@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/principal.css">
     <link rel="stylesheet" href="css/formCadastro.css">
+    <link rel="stylesheet" href="css/responsividade.css">
     <script src="js/index.js"></script>
     <script src="js/principal.js"></script>
     <script src="js/formCadastro.js"></script>
@@ -24,8 +25,15 @@
         <div class="cabecalho">
             <div class="logoMarca">
                 <img src="img/logo.png" alt="">
+                <i class="fa-solid fa-bars"></i>
+                <div class="menuMobile" id="menuMobile">
+                    <a href="#" onclick="abrirForm()">Novo paciente</a>
+                    <a href="#" onclick="abrirIMC()">Índice Massa Corporal (IMC)</a>
+                    <a href="#" onclick="abrirRCQ()">Relação Cintura/Quadril (RCQ)</a>
+                    <a href="#" onclick="abrirIAC()">Índice de Adiposidade Corporal (IAC)</a>
+                    <a href="#" id="btnAreaRestrita" onclick="areaRestrita()">Área restrita</a>
+                </div>
             </div>
-
             <nav class="menu" id="menu">
                 <a href="#" onclick="abrirForm()">Novo paciente</a>
                 <a href="#" onclick="abrirIMC()">Índice Massa Corporal (IMC)</a>
@@ -162,9 +170,9 @@
 
                 <div id="caixaResultadoRCQ" class="caixaResultadoRCQ">
                     <h5>Resultados da RCQ</h5>
-                    <div class="foto">
-                        <img src="img/man.png" width=80 alt="" id="homem">
-                        <img src="img/girl.png" width=80 alt="" id="mulher" style="visibility:hidden">
+                    <div class="fotoRCQ">
+                        <img src="img/man.png" width=80 alt="Avatar masculino" id="homemRCQ">
+                        <img src="img/girl.png" width=80 alt="Avatar feminino" id="mulherRCQ" style="display: none;">
                     </div>
                     <h3>Cintura:</h3><input type="text" disabled="" id="cinturaResultadoRCQ">
                     <h3>Quadril:</h3><input type="text" disabled="" id="quadrilResultadoRCQ">

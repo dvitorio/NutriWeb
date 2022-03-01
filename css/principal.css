@@ -23,6 +23,17 @@
     padding: 5px;
     margin: 5px;
 }
+.logoMarca i{
+    color: cornflowerblue;
+    cursor: pointer;
+    font-size: 1.25rem;
+    margin-left: 2vw;
+    visibility: hidden;
+}
+.menuMobile{
+    display: block;
+    visibility: hidden;
+}
 .menu{
     display: flex;
     align-items: center;
@@ -39,6 +50,7 @@
 .menu a:hover{
     cursor: pointer;
     background-color: cornflowerblue;
+    transition: all 0.3s;
     color: white;
 }
 .paginaPrincipal{
@@ -267,6 +279,13 @@
     border-radius: 10px;
     visibility: hidden;
     color: white;
+}
+.foto{
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    border: 1px solid white;
+    background-size: cover;
 }
 .caixaResultadoRCQ input{
     color: white;

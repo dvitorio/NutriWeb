@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriWeb - índices</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/indices.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Love+Light&family=Montserrat&family=Open+Sans&family=Roboto:ital,wght@0,300;1,500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <div class="containerGeneral container">
+    <div class="col menu">
+      <div class="row">
+        <div class="col-md-4">
+          <button class="btn btn-block btn-primary btn-lg ml-1 mt-1" onclick="openIMC()"><i
+              class="fa-solid fa-weight-scale"></i>
+            Índice de Massa Corporal (IMC)</button>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-block btn-primary btn-lg ml-1 mt-1" onclick="openRCQ()"><i
+              class="fa-solid fa-restroom"></i> Relação
+            Cintura/Quadril (RCQ)</button>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-block btn-primary btn-lg ml-1 mt-1" onclick="openIAC()"><i
+              class="fa-solid fa-people-arrows-left-right"></i> Índice de Adiposidade Corporal (IAC)</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container coverApp">
+      <h1 class="font-weight-bold text-white text-center">NutriWeb</h1>
+      <h3 class="text-white text-center">Os principais indicadores de saúde a apenas um clique</h3>
+    </div>
+
+
+    <!--CONTAINER GERAL-->
+    <div class="containerGeneral container-fluid mt-1">
+
+
+      <!--CONTAINER IMC-->
+      <div class="row">
+        <div class="border center-block col-sm-4 containerIndices d-none imc mt-1 mx-auto rounded shadow">
+          <button class="btn btn-outline-danger float-right mt-2" onclick="closeIMC()">X</button>
+          <h5 class="font-weight-bold py-3 text-center text-dark">Índice de Massa Corporal (IMC)</h5>
+          <label for="peso" class="form-label mb-3">Seu peso (em kg)</label>
+          <input type="text" class="form-control mb-3" id="peso">
+          <label for="altura" class="form-label mb-3">Sua altura (em metros)</label>
+          <input type="text" class="form-control mb-3" id="altura">
+          <button class="btn btn-primary mb-3" onclick="calculateIMC()">Calcular IMC</button>
+          <input type="text" class="d-none form-control mb-3 inputResult" disabled id="resultIMC">
+          <div class="mb-2 text-center" id="analisysIMC"></div>
+          <div class="btnResultIMC d-none row">
+            <div class="col-sm-6">
+              <button class="btn btn-block btn-danger mb-2" onclick="cleanIMC()">Limpar</button>
+            </div>
+            <div class="col-sm-6">
+              <button class="btn btn-block btn-outline-danger mb-2" onclick="closeIMC()">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--FINAL DO CONTAINER IMC-->
+
+
+      <!--CONTAINER RCQ-->
+      <div class="row">
+        <div class="border center-block col-sm-4 containerIndices d-none rcq mt-1 mx-auto rounded shadow">
+          <button class="btn btn-outline-danger float-right mt-2" onclick="closeRCQ()">X</button>
+          <h5 class="font-weight-bold py-3 text-center text-dark">Relação Cintura/Quadril</h5>
+          <label class="form-label mb-3" for="cintura">Medida da cintura (em cm)</label>
+          <input type="text" class="form-control mb-3" id="cintura">
+          <label class="form-label mb-3" for="quadril">Medida do quadril (em cm)</label>
+          <input type="text" class="form-control mb-3" id="quadril">
+          <div class="inputCheck form-check-inline">
+            <label for="homem" class="form-label"> Homem </label>
+            <input class="form-check checkbox mb-2" type="radio" name="sexo" value="homem" id="homem">
+            <label for="mulher" class="form-label ml-2"> Mulher </label>
+            <input class="form-check checkbox mb-2" type="radio" name="sexo" value="mulher" id="mulher">
+          </div>
+          <button class="btn btn-primary my-3" onclick="calculateRCQ()">Calcular RCQ</button>
+          <input class="d-none form-control mb-3 inputResult" type="text" disabled id="resultRCQ">
+          <div class="d-none mb-3" disabled id="resultAnalitcs"></div>
+          <div class="btnResultRCQ d-none row">
+            <div class="col-sm-6">
+              <button class="btn btn-block btn-danger mb-4 mt-3" onclick="cleanRCQ()">Limpar</button>
+            </div>
+            <div class="col-sm-6">
+              <button class="btn btn-block btn-outline-danger mb-4 mt-3" onclick="closeRCQ()">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--CONTAINER IAC-->
+    <div class="row">
+      <div class="border center-block col-sm-4 containerIndices d-none iac mt-1 mx-auto rounded shadow">
+        <button class="btn btn-outline-danger float-right mt-2" onclick="closeIAC()">X</button>
+        <h5 class="font-weight-bold py-3 text-center text-dark">Índice de Adiposidade Corporal (IAC)</h5>
+        <label class="form-label mb-3" for="quadril_iac">Medida do quadril (em centímetros)</label>
+        <input type="text" class="form-control mb-3" id="quadril_iac">
+        <label class="form-label mb-3" for="altura_iac">Medida da altura (em metros)</label>
+        <input type="text" class="form-control mb-3" id="altura_iac">
+        <div class="inputCheck">
+          <label for="homem_iac" class="form-label">Homem</label>
+          <input class="checkbox mb-2" type="radio" name="sexo" id="homem_iac">
+          <label for="mulher_iac" class="form-label ml-2">Mulher</label>
+          <input class="checkbox mb-2" type="radio" name="sexo" id="mulher_iac">
+        </div>
+        <button class="btn btn-primary my-3" onclick="calculateIAC()">Calcular IAC</button>
+        <input class="d-none form-control mb-3 inputResult" type="text" disabled id="resultIAC">
+        <div class="btnResultIAC d-none row">
+          <div class="col-sm-6">
+            <button class="btn btn-block btn-danger mb-4 mt-3">Limpar</button>
+          </div>
+          <div class="col-sm-6">
+            <button class="btn btn-block btn-outline-danger mb-4 mt-3" onclick="closeIAC()">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="js/index.js"></script>
+  <script src="js/imc.js"></script>
+</body>
+
+</html>
